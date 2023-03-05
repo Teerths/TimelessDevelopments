@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Cluster Rush</title>
+    <link rel="icon" href="icon.jpg">
+    <style>
+      /* a style sheet needs to be present for cursor hiding and custom cursors to work. */
+    </style>
+  </head>
+  <body>
+    <div class="loader">
+      <div class="loading-animation"></div>
+    </div>
+    <canvas class="emscripten" id="canvas" oncontextmenu="event.preventDefault()"></canvas>
+    <script type="text/javascript">
+      var Module = {
+        TOTAL_MEMORY: 268435456,
+        errorhandler: null, // arguments: err, url, line. This function must return 'true' if the error is handled, otherwise 'false'
+        compatibilitycheck: null,
+        backgroundColor: "#222C36",
+        splashStyle: "Dark",
+        dataUrl: "Release/NG.data",
+        codeUrl: "Release/NG.js",
+        asmUrl: "Release/NG.asm.js",
+        memUrl: "Release/NG.mem",
+      };
+      console.log("If the file NG.mem returns a 404 error, that is ok!")
+    </script>
+    <script src="Release/UnityLoader.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Playfair+Display:wght@600&display=swap');
+  * {
+    padding: 0;
+    margin: 0;
+  }
+  body {
+    overflow: hidden;
+  }
+  canvas {
+    width: 100vw;
+    height: 100vh;
+    border: none;
+    display: none;
+  }
+  .loader {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  .loading-animation {
+    width: 50px;
+    height: 50px;
+    border: 3px solid #fff;
+    border-top-color: #3498db;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+  @keyframes spin {
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+</style>
+
+<script>
+  var canvas = document.getElementById("canvas");
+  var loader = document.querySelector(".loader");
+
+    setTimeout(function() {
+      loader.style.display = "none";
+      canvas.style.display = "block";
+    }, 2500)
+</script>

@@ -1,0 +1,73 @@
+.apps {
+    position: absolute;
+    top: 6.5vw;
+    left: 7.5vw;
+    width: 85vw;
+    height: 40vw;
+    margin: 0 auto;
+    padding: 3vw;
+    background: linear-gradient(to bottom, var(--gradient-1), var(--gradient-2));
+    z-index: 99999;
+    border-radius: 1vw;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 2vw;
+    padding-top: 6vw;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.apps h1 {
+    position: absolute;
+    left: 50%;
+    top: 1.2vw;
+    transform: translateX(-50%);
+    font-size: 4vw;
+    color: var(--settings-color);
+    text-align: center;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.apps .app {
+    position: relative;
+    width: 280px;
+    height: 300px;
+    margin-bottom: 2vw;
+    border-radius: 1.5vw;
+    background-color: var(--settings-background-color);
+    transition: all 0.3s ease;
+    margin: 1vw;
+}
+
+.apps .app:hover {
+    transform: scale(1.05);
+}
+
+.apps .app img {
+    position: absolute;
+    top:40%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 2vw;
+}
+
+.apps .app h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    top: 79%;
+    text-align: center;
+    font-size: 2vw;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: var(--color-1);
+}
