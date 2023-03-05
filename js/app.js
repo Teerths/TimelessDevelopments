@@ -61,6 +61,7 @@ function antiCloseTwo() {
 }
 
 function play(game) {
+  document.getElementById('cursor').style.display = "none";
   var play = document.getElementById('play');
   var screen = document.querySelector('iframe');
   if (play.style.display == "block") {
@@ -73,5 +74,35 @@ function play(game) {
 }
 
 function close() {
+  document.getElementById('cursor').style.display = "block";
   document.getElementById('frame').remove();
+}
+
+function aboutBlankTwo() {
+  if (document.getElementById('about-blank').checked) {
+    var windowUrl = window.location.href;
+    var newWindow = window.open("about:blank", "_blank");
+    if (newWindow != null) { // add null check here
+      var newContent = document.createElement("iframe");
+      newContent.src = windowUrl;
+      newContent.style.width = "100vw";
+      newContent.style.height = "100vh";
+      newContent.style.border = "none";
+      newContent.style.position = "absolute";
+      newContent.style.top = "0";
+      newContent.style.left = "0";
+      newWindow.document.body.appendChild(newContent);
+      setTimeout(function() {
+        window.location.replace("https://classroom.google.com/u/0/h");
+      }, 100);
+    }
+  } else {
+    localStorage.removeItem('aboutBlank');
+    window.close()
+  }
+}
+
+let savedAboutBlankTwo = localStorage.getItem('aboutBlank');
+if (savedAboutBlankTwo === 'true') {
+  aboutBlankTwo();
 }
