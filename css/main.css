@@ -4,16 +4,6 @@ body {
     overflow: hidden;
 }
 
-#cursor {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background-color: var(--cursor-color);
-    position: absolute;
-    z-index: 9999;
-    pointer-events: none;
-}
-
 main {
     width: 100%;
     margin-top: 24vh;

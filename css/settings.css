@@ -90,7 +90,6 @@
 
 .slider {
     position: absolute;
-    cursor: pointer;
     top: 0;
     left: 0;
     right: 0;
@@ -98,6 +97,10 @@
     background-color: #ccc;
     -webkit-transition: .4s;
     transition: .4s;
+}
+
+.slider:hover {
+    background-color: var(--settings-background-color);
 }
 
 .slider:before {
@@ -202,8 +205,13 @@ select option {
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
     color: #fff;
-    cursor: pointer;
     border: none;
+    transition: transform .2s ease-in-out;
+}
+
+.save:hover {
+    transition: transform .2s ease-in-out;
+    transform: scale(1.05);
 }
 
 .icons {

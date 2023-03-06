@@ -37,7 +37,6 @@
     backdrop-filter: var(--color-1);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     outline: none;
-    cursor: text;
 }
 
 .content .search input::placeholder {
@@ -57,12 +56,7 @@
     font-size: 2vw;
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
-    cursor: pointer;
     transition: all 0.3s ease;
-}
-
-.content .search button i {
-    cursor: pointer;
 }
 
 #games {
@@ -92,7 +86,6 @@
     background-color: var(--settings-background-color);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease;
-    cursor: pointer;
 }
 
 #games .item:hover {

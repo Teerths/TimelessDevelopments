@@ -149,7 +149,10 @@ nav a {
     color: var(--nav-color);
     text-decoration: none;
     transition: all 0.3s ease;
-    cursor: pointer;
+}
+
+nav a:hover {
+    transform: scale(1.1);
 }
 
 #frame {
