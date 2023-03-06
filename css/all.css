@@ -23,7 +23,7 @@ body {
 
 :root { /* default */
     --background-color: #B185DB;
-    --cursor-color: #ffffff;
+    --cursor-color: #271066;
     --color-1: #ffffff;
     --color-2: #ffffff;
     --selection: #6147aad2;
@@ -220,6 +220,7 @@ nav a {
     flex-direction: column;
     padding: 0 5vw;
     border-radius: 1vw;
+    z-index: 99999;
 }
 
 .about h1 {
