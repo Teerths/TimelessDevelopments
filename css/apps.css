@@ -33,10 +33,10 @@
 
 .apps .app {
     position: relative;
-    width: 280px;
-    height: 300px;
+    width: 210px;
+    height: 220px;
     margin-bottom: 2vw;
-    border-radius: 1.5vw;
+    border-radius: 1vw;
     background-color: var(--settings-background-color);
     transition: all 0.3s ease;
     margin: 1vw;
@@ -51,10 +51,10 @@
     top:40%;
     left:50%;
     transform: translate(-50%, -50%);
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
     object-fit: cover;
-    border-radius: 2vw;
+    border-radius: 1vw;
 }
 
 .apps .app h2 {
@@ -66,7 +66,7 @@
     transform: translate(-50%);
     top: 79%;
     text-align: center;
-    font-size: 2vw;
+    font-size: 26px;
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
     color: var(--color-1);
