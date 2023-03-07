@@ -21,7 +21,7 @@ body {
     width: 0;
 }
 
-:root { /* default */
+:root { /* purple */
     --background-color: #B185DB;
     --cursor-color: #271066;
     --color-1: #ffffff;
@@ -34,9 +34,27 @@ body {
     --settings-item-background-color: #fff;
     --settings-item-color: #181818;
     --settings-item-shadow: 0 5px 10px rgba(255, 255, 255, 0.445);
-    --gradient-1: #684eaddc;
+    --gradient-1: #b185dbdc;
     --gradient-2: #A06CD5dc;
     --games: #a06cd5;
+}
+
+:root.pink { /* default */
+    --background-color: #ff5d8f;
+    --cursor-color: #db2760;
+    --color-1: #ffffff;
+    --color-2: #ffffff;
+    --selection: #ff7da6ef;
+    --nav-background-color: #ff5d8fec;
+    --nav-color: #fff;
+    --settings-background-color: #ff5d8f;
+    --settings-color: #fff;
+    --settings-item-background-color: #fff;
+    --settings-item-color: #181818;
+    --settings-item-shadow: 0 5px 10px rgba(255, 255, 255, 0.445);
+    --gradient-1: #ff5d8fdc;
+    --gradient-2: #ff87abdc;
+    --games: #ff5d8f;
 }
 
 :root.dark { /* dark */
@@ -70,7 +88,7 @@ body {
     --settings-item-background-color: #fff;
     --settings-item-color: #181818;
     --settings-item-shadow: 0 5px 10px rgba(255, 255, 255, 0.445);
-    --gradient-1: #003d9edc;
+    --gradient-1: #0353a4dc;
     --gradient-2: #0069ccdc;
     --games: #0069cc;
 }
@@ -115,6 +133,10 @@ body {
 
 #particles-js.green { 
     background-color: #67b99a;
+}
+
+#particles-js.pink { 
+    background-color: #ff5d8f;
 }
 
 #cursor {
