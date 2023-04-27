@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Settings Page</title>
+	<title>Settings frfr</title>
 	<style>
 		body {
 			background-color: #FFE4E1;
@@ -58,20 +58,19 @@
 			background-color: #C2185B;
 		}
 	</style>
+	<script>
+		function changeTitle() {
+			var newTitle = document.getElementById("titleInput").value;
+			document.title = newTitle;
+		}
+	</script>
 </head>
 <body>
 	<div class="container">
-		<h1 id="title">Settings Page</h1>
+		<h1>Settings Page</h1>
 			<label for="titleInput">Title:</label>
 			<input type="text" id="titleInput" onkeyup="changeTitle()">
 			<button class="btn" onclick="changeTitle()">Save</button>
 	</div>
-	
-	<script>
-		function changeTitle() {
-			var newTitle = document.getElementById("titleInput").value;
-			document.getElementById("title").innerHTML = newTitle;
-		}
-	</script>
 </body>
 </html>
