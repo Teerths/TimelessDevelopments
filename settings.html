@@ -1,1 +1,77 @@
-Sorry has been removed per request
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Settings Page</title>
+	<style>
+		body {
+			background-color: #FFE4E1;
+			color: white;
+			font-family: Arial, sans-serif;
+		}
+		
+		h1 {
+			font-size: 36px;
+			text-align: center;
+		}
+		
+		.container {
+			margin: 50px auto;
+			max-width: 800px;
+			padding: 20px;
+		}
+		
+		label {
+			display: block;
+			font-size: 24px;
+			margin-bottom: 10px;
+		}
+		
+		input[type=text] {
+			border: none;
+			background-color: #F8BBD0;
+			color: white;
+			font-size: 24px;
+			padding: 10px;
+			width: 100%;
+		}
+		
+		input[type=text]:focus {
+			outline: none;
+			background-color: #FFCDD2;
+		}
+		
+		.btn {
+			background-color: #E91E63;
+			border: none;
+			color: white;
+			cursor: pointer;
+			font-size: 24px;
+			padding: 10px 20px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			margin-top: 20px;
+			transition: background-color 0.3s ease;
+		}
+		
+		.btn:hover {
+			background-color: #C2185B;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1 id="title">Settings Page</h1>
+			<label for="titleInput">Title:</label>
+			<input type="text" id="titleInput" onkeyup="changeTitle()">
+			<button class="btn" onclick="changeTitle()">Save</button>
+	</div>
+	
+	<script>
+		function changeTitle() {
+			var newTitle = document.getElementById("titleInput").value;
+			document.getElementById("title").innerHTML = newTitle;
+		}
+	</script>
+</body>
+</html>
