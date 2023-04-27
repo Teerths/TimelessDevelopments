@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Settings frfr</title>
+	<title>Settings Page</title>
+	<link rel="icon" type="image/png" href="default-icon.png">
 	<style>
 		body {
 			background-color: #FFE4E1;
@@ -59,9 +60,13 @@
 		}
 	</style>
 	<script>
-		function changeTitle() {
-			var newTitle = document.getElementById("titleInput").value;
+		function changeTitle(newTitle) {
 			document.title = newTitle;
+		}
+		
+		function changeIcon(newIcon) {
+			var iconLink = document.querySelector("link[rel~='icon']");
+			iconLink.href = newIcon;
 		}
 	</script>
 </head>
@@ -69,8 +74,10 @@
 	<div class="container">
 		<h1>Settings Page</h1>
 			<label for="titleInput">Title:</label>
-			<input type="text" id="titleInput" onkeyup="changeTitle()">
-			<button class="btn" onclick="changeTitle()">Save</button>
+			<input type="text" id="titleInput" onkeyup="changeTitle(this.value)">
+			<button class="btn" onclick="changeTitle(document.getElementById('titleInput').value)">Save Title</button>
+			<button class="btn" onclick="changeIcon('classes-icon.png'); changeTitle('Classes')">Classes</button>
+			<button class="btn" onclick="changeIcon('default-icon.png'); changeTitle('Settings Page')">Reset</button>
 	</div>
 </body>
 </html>
