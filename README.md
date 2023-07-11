@@ -1,2 +1,2 @@
-# BY BLAZER
-thx blazer
+# Boosts!!
+Coming Soon!!
