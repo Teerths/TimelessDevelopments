@@ -1,83 +1,278 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Settings Page</title>
-	<link rel="icon" type="image/png" href="default-icon.png">
-	<style>
-		body {
-			background-color: #FFE4E1;
-			color: white;
-			font-family: Arial, sans-serif;
-		}
-		
-		h1 {
-			font-size: 36px;
-			text-align: center;
-		}
-		
-		.container {
-			margin: 50px auto;
-			max-width: 800px;
-			padding: 20px;
-		}
-		
-		label {
-			display: block;
-			font-size: 24px;
-			margin-bottom: 10px;
-		}
-		
-		input[type=text] {
-			border: none;
-			background-color: #F8BBD0;
-			color: white;
-			font-size: 24px;
-			padding: 10px;
-			width: 100%;
-		}
-		
-		input[type=text]:focus {
-			outline: none;
-			background-color: #FFCDD2;
-		}
-		
-		.btn {
-			background-color: #E91E63;
-			border: none;
-			color: white;
-			cursor: pointer;
-			font-size: 24px;
-			padding: 10px 20px;
-			text-align: center;
-			text-decoration: none;
-			display: inline-block;
-			margin-top: 20px;
-			transition: background-color 0.3s ease;
-		}
-		
-		.btn:hover {
-			background-color: #C2185B;
-		}
-	</style>
-	<script>
-		function changeTitle(newTitle) {
-			document.title = newTitle;
-		}
-		
-		function changeIcon(newIcon) {
-			var iconLink = document.querySelector("link[rel~='icon']");
-			iconLink.href = newIcon;
-		}
-	</script>
-</head>
-<body>
-	<div class="container">
-		<h1>Settings Page</h1>
-			<label for="titleInput">Title:</label>
-			<input type="text" id="titleInput" onkeyup="changeTitle(this.value)">
-			<button class="btn" onclick="changeTitle(document.getElementById('titleInput').value)">Save Title</button>
-			<button class="btn" onclick="changeIcon('classes-icon.png'); changeTitle('Classes')">Classes</button>
-			<button class="btn" onclick="changeIcon('default-icon.png'); changeTitle('Settings Page')">Reset</button>
-	</div>
-</body>
-</html>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    cursor: none;
+}
+
+::selection {
+    background-color: var(--selection);
+    color: #fff;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--color);
+}
+
+::-webkit-scrollbar {
+    width: 0;
+}
+
+:root { /* purple */
+    --background-color: #B185DB;
+    --cursor-color: #271066;
+    --color-1: #ffffff;
+    --color-2: #ffffff;
+    --selection: #6147aad2;
+    --nav-background-color: #b185dbec;
+    --nav-color: #fff;
+    --settings-background-color: #B185DB;
+    --settings-color: #fff;
+    --settings-item-background-color: #fff;
+    --settings-item-color: #181818;
+    --settings-item-shadow: 0 5px 10px rgba(255, 255, 255, 0.445);
+    --gradient-1: #b185dbdc;
+    --gradient-2: #A06CD5dc;
+    --games: #a06cd5;
+}
+
+:root.pink { /* default */
+    --background-color: #ff5d8f;
+    --cursor-color: #db2760;
+    --color-1: #ffffff;
+    --color-2: #ffffff;
+    --selection: #ff7da6ef;
+    --nav-background-color: #ff5d8fec;
+    --nav-color: #fff;
+    --settings-background-color: #ff5d8f;
+    --settings-color: #fff;
+    --settings-item-background-color: #fff;
+    --settings-item-color: #181818;
+    --settings-item-shadow: 0 5px 10px rgba(255, 255, 255, 0.445);
+    --gradient-1: #ff5d8fdc;
+    --gradient-2: #ff87abdc;
+    --games: #ff5d8f;
+}
+
+:root.dark { /* dark */
+    --background-color: #202020;
+    --cursor-color: #b8b8b8;
+    --color-1: #ffffff;
+    --color-2: #ffffff;
+    --selection: #3b3b3bd2;
+    --nav-background-color: #252525ef;
+    --nav-color: #fff;
+    --settings-background-color: #1b1b1b;
+    --settings-color: #fff;
+    --settings-item-background-color: #fff;
+    --settings-item-color: #181818;
+    --settings-item-shadow: 0 5px 10px rgba(255, 255, 255, 0.445);
+    --gradient-1: #131313dc;
+    --gradient-2: #292929dc;
+    --games: #292929;
+}
+
+:root.blue { /* blue */
+    --background-color: #0353a4;
+    --cursor-color: #0046a1;
+    --color-1: #ffffff;
+    --color-2: #ffffff;
+    --selection: #269dff;
+    --nav-background-color: #0466c8f1;
+    --nav-color: #fff;
+    --settings-background-color: #023e7d;
+    --settings-color: #fff;
+    --settings-item-background-color: #fff;
+    --settings-item-color: #181818;
+    --settings-item-shadow: 0 5px 10px rgba(255, 255, 255, 0.445);
+    --gradient-1: #0353a4dc;
+    --gradient-2: #0069ccdc;
+    --games: #0069cc;
+}
+
+:root.green { /* green */
+    --background-color: #67b99a;
+    --cursor-color: #88d4ab;
+    --color-1: #ffffff;
+    --color-2: #ffffff;
+    --selection: #358f80e3;
+    --nav-background-color: #358f80e3;
+    --nav-color: #fff;
+    --settings-background-color: #4c956c;
+    --settings-color: #fff;
+    --settings-item-background-color: #fff;
+    --settings-item-color: #181818;
+    --settings-item-shadow: 0 5px 10px rgba(255, 255, 255, 0.445);
+    --gradient-1: #67b99adc;
+    --gradient-2: #358f80dc;
+    --games: #358f80;
+}
+
+#particles-js { 
+    position:fixed; 
+    top:0;
+    left:0;
+    width: 100vw; 
+    height: 100vh; 
+    background-color: #B185DB;
+    z-index: 1;
+    pointer-events: none;
+    user-select: none;
+}
+
+#particles-js.dark { 
+    background-color: #202020;
+}
+
+#particles-js.blue { 
+    background-color: #0353a4;
+}
+
+#particles-js.green { 
+    background-color: #67b99a;
+}
+
+#particles-js.pink { 
+    background-color: #ff5d8f;
+}
+
+#cursor {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--cursor-color);
+    position: fixed;
+    z-index: 9999999999999999;
+    pointer-events: none;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10vh;
+    background-color: var(--nav-background-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5vw;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+}
+
+nav a {
+    font-size: 1.5vw;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: var(--nav-color);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    transform: scale(1.1);
+}
+
+#frame {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    z-index: 999999999999999999999999999999999999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    pointer-events: none;
+    user-select: none;
+}
+
+#play {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9999999;
+    border: none;
+    background-color: #222222;
+    display: none;
+}
+
+#play iframe {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    border: none;
+    z-index: 99999;
+}
+
+#play i {
+    position: absolute;
+    top: 1vw;
+    left: 1vw;
+    font-size: 5rem;
+    color: var(--background-color);
+    cursor: pointer;
+    backdrop-filter: blur(14px) brightness(1.25);
+    box-shadow: 0 0 15px 0 #474747bb;
+    z-index: 99999999;
+    padding: .5vw;
+    border-radius: 1vw;
+}
+
+.about {
+    position: absolute;
+    top: 6.5vw;
+    left: 7.5vw;
+    width: 85vw;
+    height: 40vw;
+    margin: 0 auto;
+    padding: 3vw;
+    background: linear-gradient(to bottom, var(--gradient-1), var(--gradient-2));
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 5vw;
+    border-radius: 1vw;
+    z-index: 99999;
+}
+
+.about h1 {
+    position: absolute;
+    left: 50%;
+    top: 5vw;
+    width: 100%;
+    text-align: center;
+    transform: translateX(-50%);
+    font-size: 4vw;
+    color: var(--settings-color);
+    text-align: center;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.about p {
+    position: absolute;
+    left: 50%;
+    top: 32%;
+    width: 80%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    font-size: 1.8vw;
+    font-weight: 600;
+    color: var(--settings-color);
+    text-align: center;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
